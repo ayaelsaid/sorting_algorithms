@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 /**
  * bubble_sort - compare every number with all
@@ -7,10 +9,14 @@
 */
 void bubble_sort(int *array, size_t size)
 {
-	int j, i;
+	size_t j = 0;
+	size_t i;
 
+	if (!array || !size)
+		return;
 	while (j < size - 1)
 	{
+	i = 0;
 	while (i < size - j - 1)
 	{
 	if (array[i] > array[i + 1])
@@ -26,4 +32,4 @@ void bubble_sort(int *array, size_t size)
 	}
 	j++;
 	}
-
+}
